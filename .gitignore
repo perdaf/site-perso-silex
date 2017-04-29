@@ -1,0 +1,10 @@
+# Cache
+/cache/*
+
+/psd/*
+/www/assets/videos/*
+/vendor/*
+
+/bower_components/*
+
+/.phpintel
