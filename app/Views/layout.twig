@@ -1,0 +1,118 @@
+{# layout principal #}
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Perdaf steeve</title>
+		
+		{# <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> #}
+		<link rel="stylesheet" type="text/css" href="{{ url('index') }}../bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+		<link rel="stylesheet" href="{{ url('index') }}../bower_components/wow/css/libs/animate.css" rel="stylesheet">
+
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		
+		<link rel="stylesheet" href="{{ asset('/assets/css/style.css') }}" rel="stylesheet">
+
+		{# <link href="https://fonts.googleapis.com/css?family=Marck+Script|Roboto|Roboto+Condensed" rel="stylesheet">  #}
+
+		<link rel="stylesheet" type="text/css" href="{{ url('index') }}../bower_components/bootstrap-sweetalert/dist/sweetalert.css">
+		
+		{% block head %}
+			
+		{% endblock %}
+
+	</head>
+	<body id="home">
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="600">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+		
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#my-works">My Works</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div>
+		</nav>
+		
+			<div class="video-container">
+		<div class="filter">
+			<div class="logo wow bounceInDown">
+				<div class="accroche"><h1><q>Ma passion, votre réussite.</q></h1></div>
+				<img src="{{ asset('assets/img/dualMe.png') }}" alt="">
+				<h1>PERDAF Steeve</h1>
+				<hr class="first">
+				<h2>Developpeur Full-Stack</h2>
+				<hr>
+			</div>
+				<i class="fa fa-arrow-circle-o-down fa-2x scroll-down wow bounce" aria-hidden="true"></i>
+			<video autoplay loop poster="{{ asset('assets/img/header_BG.jpg') }}" id="bgvid">
+		  	<source src="{{ url('index') }}assets/videos/473287184.mp4" type="video/mp4">
+			</video>
+		</div>
+	</div>
+
+	{% block content %}
+
+	{% endblock %}
+
+
+		
+			
+		<footer>
+		</footer>
+		{# jquery core #}
+		<script src="{{ url('index') }}../bower_components/jquery/dist/jquery.min.js"></script>
+		<!--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>-->
+		<!-- Latest compiled and minified JavaScript -->
+		<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+
+		<script src="{{ url('index') }}../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+		<script src="{{ url('index') }}../bower_components/wow/dist/wow.min.js"></script>
+		
+		<script src="{{ url('index') }}../bower_components/bootstrap-sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>
+    	new WOW().init();
+    </script>
+    <script>
+    	$(document).ready(function() {
+		    /*Smooth link animation*/
+				var $root = $('html, body');
+				$('a').click(function() {
+				    var href = $.attr(this, 'href');
+				    $root.animate({
+				        scrollTop: $(href).offset().top - 100
+				    }, 500, function () {
+				        window.location.hash = href;
+				    });
+				    return false;
+				});
+		   });
+
+    </script>
+		{% block script %}
+					
+		{% endblock %}
+		
+	</body>
+</html>

@@ -1,0 +1,405 @@
+{% extends "layout.twig" %}
+{% block head %}
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/zoombox.css') }}">
+{% endblock %}	
+{% block content %}
+	<section class="about-me" id="about">
+		<div class="container">
+			<div  class="wow bounceInDown" id="about">
+				<h1 class="section-title text-center">Qui suis-je ?</h1>
+			</div>
+			<p>Né à la Martinique, j’ai toujours été passionné par les arts, l’informatique et la programmation plus particulièrement. Le Web aujourd’hui me permet d’assouvir ces deux passions car de nos jours un site internet se doit d’être à la fois beau visuellement et bien codé pour être efficace.
+			En tant que développeur full-stack, je met un point d’honneur à atteindre ces objectifs. <q> La réussite de votre Site donc votre réussite est ma passion.</q>
+			</p>
+		</div>
+	</section>
+	<section class="mes-rea" >
+		<div class="filter-rea">
+			<div  class="wow bounceInDown" id="my-works">
+				<h1 class="section-title text-center">Mes réalisations</h1>
+			</div>
+		</div>
+		<div class="container">
+			<div class="rea-web">
+				<h2 class="text-center">Mon travail au hazar</h2>
+				<div class="row">
+					{% for picture in data %}	
+						<div class="col-lg-3 col-md-6 col-xs-12">
+							<a href="{{ asset('/assets/img/myworks/')}}{{ picture.name }}" class="zoombox"><img src="{{ asset('/assets/img/myworks/')}}{{ picture.name }}" alt="" class="img-thumbnail img-responsive center-block"></a>
+						</div>
+					{% endfor %}
+					
+					{# <div class="col-lg-3 col-md-6 col-xs-12">
+						<img src="{{ asset('/assets/img/myworks/picture013.jpg') }}" alt="" class="img-thumbnail img-responsive center-block">
+					</div>
+					<div class="col-lg-3 col-md-6 col-xs-12">
+						<img src="{{ asset('/assets/img/myworks/picture016.jpg') }}" alt="" class="img-thumbnail img-responsive center-block">
+					</div>
+					<div class="col-lg-3 col-md-6 col-xs-12">
+						<img src="{{ asset('/assets/img/myworks/picture003.jpg') }}" alt="" class="img-thumbnail img-responsive center-block">
+					</div> #}
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section class="mes-competences">
+		<div class="container">
+			<div  class="wow bounceInDown">
+				<h1 class="section-title text-center">Mes compétences</h1>
+			</div>
+			<h2 class="text-center">Languages informatique</h2>
+			<div class="row col-xs-6 col-xs-push-3">                   
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
+                <span class="sr-only">95% Complete</span>
+            </div>
+            <span class="progress-type">HTML / HTML5</span>
+            <span class="progress-completed">95%</span>
+        </div>
+
+         <div class="progress">
+            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                <span class="sr-only">90% Complete (danger)</span>
+            </div>
+            <span class="progress-type">CSS / CSS3</span>
+            <span class="progress-completed">90%</span>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100" style="width: 73%">
+                <span class="sr-only">73% Complete (success)</span>
+            </div>
+            <span class="progress-type">PHP</span>
+            <span class="progress-completed">73%</span>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                <span class="sr-only">70% Complete (info)</span>
+            </div>
+            <span class="progress-type">MySQL</span>
+            <span class="progress-completed">70%</span>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100" style="width: 76%">
+                <span class="sr-only">76% Complete (warning)</span>
+            </div>
+            <span class="progress-type">JavaScript / jQuery</span>
+            <span class="progress-completed">76%</span>
+        </div>
+        <hr>
+        <h2 class="text-center">Infographie/design</h2>
+
+        <div class="progress">
+            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                <span class="sr-only">100% Complete (warning)</span>
+            </div>
+            <span class="progress-type">Photoshop</span>
+            <span class="progress-completed">100%</span>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" style="width: 92%">
+                <span class="sr-only">92% Complete (info)</span>
+            </div>
+            <span class="progress-type">Illustrator</span>
+            <span class="progress-completed">92%</span>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+                <span class="sr-only">85% Complete (success)</span>
+            </div>
+            <span class="progress-type">UI/UX</span>
+            <span class="progress-completed">85%</span>
+        </div>
+       
+	</div>
+		</div>
+	</section>
+	<section class="mon-parcour">
+
+			<div  class="wow bounceInDown">
+				<h1 class="section-title text-center">Mon parcour</h1>
+			</div>
+		<div class="container">
+			<div class="Parcour professionel">
+				<h2 class="text-center">Mes expériences professionel</h2>
+			</div>
+			<ul class="timeline">
+				<li>
+					<div class="timeline-badge">2015</div>
+					<div class="timeline-panel wow bounceInLeft">
+						<div class="timeline-heading">
+							<h4 class="timeline-title">Infographiste</h4>
+							<p><small class="text-muted">de 2012 à 2015</small></p>
+						</div>
+						<div class="timeline-body">
+							<p>Infographiste pour la société Boutique KDO</p>
+							<p>J'avais pour tache de créer et suivre tout le process pour la création de flyer, banderole, kakémono et la création d'article personalisé pour les clients</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-inverted ">
+					<div class="timeline-badge warning">2012</i></div>
+					<div class="timeline-panel wow bounceInRight">
+						<div class="timeline-heading">
+							<h4 class="timeline-title">Infographiste 2D/3D</h4>
+						</div>
+						<div class="timeline-body">
+							<p>Infographiste 2D/3D chez Avantille.</p>
+							<p>Modélisation des batiments de la ville de Fort de France a partire de photo ainssi que la réalisation des texture de ceux-ci.</p>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="timeline-badge warning">2010</i></div>
+					<div class="timeline-panel wow bounceInLeft">
+						<div class="timeline-heading">
+							<h4 class="timeline-title">Conseiller clientel chez Free</h4>
+							<p><small class="text-muted">de 2012 à 2015</small></p>
+						</div>
+						<div class="timeline-body">
+							<p>Conseiller clientèle support technique pour la société FREE.</p>
+						</div>
+					</div>
+				</li>
+				
+				<li class="timeline-inverted">
+					<div class="timeline-badge warning">2004</div>
+					<div class="timeline-panel wow bounceInRight">
+						<div class="timeline-heading">
+							<h4 class="timeline-title">Emploi jeune</h4>
+							<p><small class="text-muted">de 1999 à 2004</small></p>
+						</div>
+						<div class="timeline-body">
+							<p>Emploi jeune à l’Ecole de TOCTOUCCAU (Pessac, France).</p>
+							<p>Ma Mission était d'apprendre les fondement de l'informatique au enfants de 6 a 11ans</p>
+						</div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="timeline-badge success">1999</div>
+					<div class="timeline-panel wow bounceInLeft">
+						<div class="timeline-heading">
+							<h4 class="timeline-title">Programmeur dans l'armée Française</h4>
+							<p><small class="text-muted">de 1998 à 1999</small></p>
+						</div>
+						<div class="timeline-body">
+							<p>Programmeur dans l’ARMEE FRANCAISE dans le cadre du service national en formation emploi.</p>
+						</div>
+					</div>
+				</li>
+
+				<li class="timeline-inverted">
+					<div class="timeline-badge success">1996</div>
+					<div class="timeline-panel wow bounceInRight">
+						<div class="timeline-heading">
+							<h4 class="timeline-title">Stage proféssionnel</h4>
+						</div>
+						<div class="timeline-body">
+							<p>Assistant technique informatique et infographiste à R.F.O Martinique (stage professionnel)</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		
+		<div class="diplomes">
+			<h2 class="text-center">Mon parcour scolaire et Diplomes</h2>
+		</div>
+
+		<ul class="timeline">
+			<li>
+				<div class="timeline-badge">2017</div>
+				<div class="timeline-panel">
+					<div class="timeline-heading">
+						<h4 class="timeline-title">Certification proféssionnelle webForce3</h4>
+						<p><small class="text-muted">Avril 2017</small></p>
+					</div>
+					<div class="timeline-body">
+						<p>Les formations WebForce3 « techniques de développement web » (305 heures de cours) et « techniques d’intégration web » (185 heures de cours) ont été reconnues en novembre 2015 par la Commission Nationale de la Certification Professionnelle (CNCP) et sont inscrites à l’Inventaire. Cette reconnaissance officielle est un gage supplémentaire de la qualité des programmes de formation WebForce3, qui répondent aux critères d’exigences des acteurs publics et privés de l’emploi et de la formation professionnelle dans le secteur du numérique en constante mutation.</p>
+					</div>
+				</div>
+			</li>
+			<li class="timeline-inverted">
+				<div class="timeline-badge warning">2002</div>
+				<div class="timeline-panel">
+					<div class="timeline-heading">
+						<h4 class="timeline-title">Certificat de compétence (CNAM)</h4>
+					</div>
+					<div class="timeline-body">
+						<p>Titulaire du Certificat de Compétences <strong>«Chef de projet site intranet/internet»</strong> délivré par le CNAM (Bordeaux).</p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="timeline-badge danger">1997</div>
+				<div class="timeline-panel">
+					<div class="timeline-heading">
+						<h4 class="timeline-title">BTS Informatique industriel</h4>
+					</div>
+					<div class="timeline-body">
+						<p>Titulaire du Brevet de Technicien Supérieur en Informatique Industrielle au Lycée Polyvalent de la Pointe des Nègres (Martinique)</p>
+					</div>
+				</div>
+			</li>
+			<li class="timeline-inverted">
+				<div class="timeline-badge warning">1995</div>
+				<div class="timeline-panel">
+					<div class="timeline-heading">
+						<h4 class="timeline-title">BAC "génie éléctronique"</h4>
+					</div>
+					<div class="timeline-body">
+						<p>Titulaire du Baccalauréat S.T.I Génie Electronique au Lycée Polyvalent de la Pointe des Nègres (Martinique)</p>
+					</div>
+				</div>
+			</li>
+		</ul>
+
+	</section>
+	<section class="why-me">
+		<div class="container">
+			<div  class="wow bounceInDown block-title">
+				<h1 class="section-title">Pourquoi moi ?</h1>
+			</div>
+			<p>Engagé à tenir avec une conscience professionnelle accrue les missions qui me sont confiées, je suis tout à fait disposé à m’investir dans une fonction pour laquelle, une justesse technique parfaite, un sens artistique aiguë, une imagination débordante ainsi qu’une volonté de satisfaction clients sont des facteurs de succès.</p>
+		</div>
+	</section>
+	<section class="see-on-behance">
+		<div class="container">
+			<div  class="wow bounceInDown">
+				<h1 class="section-title text-center">Voir mes autres travaux sur behance</h1>
+			</div>
+			<p class="lien-behance"><a href="https://www.behance.net/spartdesign972" target="_blank" >Behance</a><sup>TM</sup></p>
+		</div>
+	</section>
+
+	<section class="contact" >
+		<div class="container">
+			<div  class="wow bounceInDown" id="contact">
+				<h1 class="section-title text-center">Me Contacter</h1>
+			</div>
+
+			
+
+			<div class="profile-content">
+				<div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="well well-sm">
+
+          <form class="form-horizontal" action="{{ url('contact') }}" method="post" id="contact_form" enctype='multipart/form-data'>
+          <fieldset>
+    
+            <!-- Name input-->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="name">Nom</label>
+              <div class="col-md-9">
+                <input id="name" name="name" type="text" placeholder="Votre Nom" class="form-control" required>
+              </div>
+            </div>
+    
+            <!-- Email input-->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="email">Votre E-mail</label>
+              <div class="col-md-9">
+                <input id="email" name="email" type="text" placeholder="Votre email" class="form-control" required>
+              </div>
+            </div>
+    
+            <!-- Message body -->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="message">Votre message</label>
+              <div class="col-md-9">
+                <textarea class="form-control" id="message" name="message" placeholder="Ecrivez votre message ici..." rows="5"></textarea>
+              </div>
+            </div>
+    
+            <!-- Form actions -->
+            <div class="form-group">
+              <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Envoyé <span class="glyphicon glyphicon-send"></span></button>
+              </div>
+            </div>
+          </fieldset>
+          </form>
+        </div>
+      </div>
+	</div>
+</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+{% block script %}
+
+	<script src="{{ asset('assets/js/zoombox.js') }}" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+					
+					// traitement du formulaire de contact
+					$('#contact_form').on('submit', function(e) {
+		        e.preventDefault();
+		        
+		        var $form = $('#contact_form');
+				    var formdata = (window.FormData) ? new FormData($form[0]) : null;
+				    var data = (formdata !== null) ? formdata : $form.serialize();
+		  
+		        swal({
+			            title: "Envoyer un message",
+			            text: "Voulez-vous envoyer le message ?",
+			            type: "info",
+			            showCancelButton: true,
+			            closeOnConfirm: false,
+			            showLoaderOnConfirm: true
+			        }, function() {
+			            setTimeout(function() {
+			                $.ajax({
+			                    method: 'post',
+			                    url:  $form.attr('action'),
+			                    // url:  {{ url('contact') }},
+			                    data: data,
+			                    contentType: false,
+									        processData: false, 
+									        cache: false,
+			                    dataType: 'json',
+			                    success: function(result) {
+			                        swal({
+			                            title: 'Envoi du message',
+			                            text: result.message,
+			                            type: result.status
+			                        }, function() {
+			                            $form[0].reset();
+			                        });
+			                    }
+			                });
+			            }, 500);
+			        });
+	        });
+
+
+
+		    	/*Scroll Spy*/
+					$('body').scrollspy({ target: '#spy', offset:80});
+					
+					/*Smooth link animation*/
+					// $('a[href*=#]:not([href=#])').click(function() {
+					// 	if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+					// 		var target = $(this.hash);
+					// 		target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+					// 		if (target.length) {
+					// 			$('html,body').animate({
+					// 				scrollTop: target.offset().top
+					// 				}, 1000);
+					// 					return false;
+					// 		}
+					// 	}
+					// });
+					
+
+					// appel de zoombox
+					$('a.zoombox').zoombox();
+		});
+	</script>
+{% endblock %}

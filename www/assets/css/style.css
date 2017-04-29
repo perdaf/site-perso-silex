@@ -1,0 +1,291 @@
+@import "diplome_timeline.css";
+@import url('https://fonts.googleapis.com/css?family=Marck+Script|Roboto|Roboto+Condensed');
+html, body{
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.navbar-inverse {
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0)100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0)100%);
+    border: none;
+    border-radius: 0;
+}
+.navbar-nav > li:hover{
+  background: #ffa726
+}
+.navbar-right {
+    float: right !important;
+    margin-right: 10px;
+}
+
+.affix {
+    background: #000;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+.accroche{
+  position: relative;
+  font-family: 'Marck Script', cursive;
+  color:  white;
+  text-align: center;
+  font-size: 4em;
+  top: -50px;
+}
+.video-container{
+  position:  relative;
+  display: block;
+  min-height: 730px;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.filter{
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+#bgvid{
+  position:absolute;
+  right:0;
+  bottom:0;
+  min-width:100%;
+  min-height:100%;
+  width:auto;
+  height:auto;
+  z-index:-999;
+  overflow:hidden;
+  background: url('../img/header_BG.jpg') top no-repeat;
+  background-attachment: fixed;
+
+}
+video{
+  display:block;
+}
+.logo img{
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+.logo{
+  position: absolute;
+  display:  block;
+  width: 600px;
+  bottom: 100px;
+  left: calc((100% / 2 ) - (600px / 2));
+}
+.logo > h1,
+.logo > h2{
+  color:  #fff;
+  text-align: center;
+}
+.logo h1{
+  font-weight: bold;
+  letter-spacing: 6px;
+}
+.logo h2{
+  text-transform: uppercase;
+  font-size: 1.6em;
+  color: #ffa726;
+}
+.logo hr{
+  width: 100%;
+}
+.logo hr.first{
+  border-color: #999;
+}
+.scroll-down{
+  display: block;
+  position: absolute;
+  width: 50px;
+  bottom: 0px;
+  left:  calc((100% / 2) - 25px);
+  font-size: 3em;
+  color:  white;
+}
+
+section h1{
+  font-size: 3.2em;
+  font-weight: bolder;
+  color:  rgba(0, 0, 0, 0.1);
+}
+.about-me{
+  padding: 10px 0 20px;
+  background: #323232;
+  color:  #fff;
+  margin-bottom: -20px;
+}
+.about-me .section-title{
+  color: #bbb;
+}
+.about-me p{
+  font-size: 1.5em;
+}
+/*------------ Mes realisations ---------*/
+.mes-rea{
+  position: relative;
+  margin: 0 0 20px;
+}
+.mes-rea h1{
+  height: 400px;
+  width: 100%;
+  background: url('../img/mes_rea_BG.jpg') top center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  line-height: 400px;
+  color: #ffa726;
+  text-shadow: 2px 2px 2px #000;
+}
+.mes-rea img.img-thumbnail{
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  border:  1px solid #ffa726;
+}
+.mes-rea img.img-thumbnail:hover{
+  -webkit-filter: none;
+          filter: none;
+          box-shadow: 2px 1px 5px 1px rgba(0, 0, 0, 0.6)
+}
+/* ------------------------------------- */
+/*--------- progress bar ---------*/
+.progress {
+  position: relative;
+  height: 25px;
+}
+.progress > .progress-type {
+  position: absolute;
+  left: 0px;
+  font-weight: 800;
+  padding: 3px 30px 2px 10px;
+  color: rgb(255, 255, 255);
+  background-color: rgba(25, 25, 25, 0.2);
+}
+.progress > .progress-completed {
+  position: absolute;
+  right: 0px;
+  font-weight: 800;
+  padding: 3px 10px 2px;
+}
+
+/* ----------------------------- */
+/*---------- mes competences --------*/
+.mes-competences{
+  background-color: #EDEEEF;
+  margin-bottom: -20px;
+}
+.mes-competences h1{
+  color: #ffa726;
+  text-shadow:  2px 2px 1px #000;
+}
+/* --------------------------------- */
+/*---------- Mon parcour ---------*/
+.mon-parcour{
+  margin-top: 0;
+}
+
+.mon-parcour h1{
+  height: 250px;
+  width: 100%;
+  background: url('../img/footprints.jpg') top right no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  line-height: 250px;
+  color:  white;
+  text-shadow: 2px 2px 2px #000;
+}
+/* ----------------------------- */
+.see-on-behance{
+  padding: 10px 0 20px;
+  background: #323232;
+  color:  #fff;
+}
+.see-on-behance:hover{
+  background: #03a9f4;
+  -webkit-transform: scaleY(1.1);
+          transform: scaleY(1.1);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.see-on-behance .section-title{
+  color: #eee;
+}
+.lien-behance{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size:  10em;
+  color:  white;
+}
+.lien-behance:hover > a{
+  color: white;
+}
+.lien-behance a:hover{
+  text-decoration: none;
+}
+.lien-behance sup{
+  display: inline-block;
+  width: 50px;
+  top: -70px;
+  font-size: 20px;
+}
+/*--------------- why-me ---------------*/
+.why-me{
+  margin: 50px 0 -50px;
+}
+.why-me .block-title{
+  position:  relative;
+  display: block;
+  height: 250px;
+  width: 450px;
+  background: rgba(0, 0, 0, 0.2);
+  margin:  0 auto;
+  padding: 5px;
+  box-shadow: 2px 2px 5px 1px #000;
+}
+.why-me .block-title h1{
+  margin: 0;
+  color: white;
+  text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.why-me p{
+  display: block;
+  position: relative;
+  height: 250px;
+  width: 450px;
+  top: -180px;
+  left:  30px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 1);
+  margin:  0 auto;
+  padding: 5px;
+  color: white;
+  font-size: 1.5em;
+  text-align:  center;
+
+}
+
+/* ----------------------------------- */
+
+/*----------- contact ----------*/
+.contact{
+  padding: 10px 0 20px;
+  background: #222;
+  color:  #fff;
+}
+.contact .section-title{
+  color: #ffa726;
+}
+.well{
+  background: transparent;
+  border-color: #ffa726;
+}
+
+.contact .btn-primary {
+    color: #fff;
+    background-color: #ffa726;
+    border: none;
+}
