@@ -1,8 +1,0 @@
-{% extends "layout.twig" %}
-{% block content %}
-
-	{% for pic in data %}
-		<p><strong>{{ loop.index }}</strong><br>{{ pic.id }}<br>{{ pic.name }}<br>{{ pic.cat }}<br>{{ pic.url }}</p>
-	{% endfor %}
-
-{% endblock %}
