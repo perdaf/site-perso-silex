@@ -3,7 +3,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 
 define('ROOT', __DIR__);
-// Ce fichier es appeller en premier par index.php
 
 // definition de la time zone
 ini_set('date.timezone', 'America/Martinique');
@@ -58,7 +57,7 @@ $app['models.contact'] = function($app){
 $app['debug'] = true;
 
 
-//redefine error route
+//test redefine error route
 $app->error(function (\Exception $e, Request $request, $code) {
     switch ($code) {
         case 404:
