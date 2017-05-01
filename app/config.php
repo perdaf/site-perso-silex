@@ -11,7 +11,7 @@ ini_set('date.timezone', 'America/Martinique');
 $loader = require_once ROOT.'/../vendor/autoload.php';
 
 // Ajout du repertoir applicatif dans l'autoloader
-$loader->add("App", dirname(ROOT));
+$loader->add("app", dirname(ROOT));
 
 // instentiation d'un objet silex/application
 $app = new Silex\Application();
